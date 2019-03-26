@@ -1,10 +1,10 @@
 package main
 
 import (
+	"devprojects/Lab_1_TlilO/analytical"
+	"devprojects/Lab_1_TlilO/brown-robinson"
 	"fmt"
 	"gonum.org/v1/gonum/mat"
-	"lab1/analytical"
-	"lab1/brown-robinson"
 	"math"
 )
 
