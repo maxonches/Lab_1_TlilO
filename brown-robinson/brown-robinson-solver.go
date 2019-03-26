@@ -46,4 +46,3 @@ func (brs *BrownRobinsonSolver) CalculateGameCost() float64 {
 
 	return gameCost
 }
-

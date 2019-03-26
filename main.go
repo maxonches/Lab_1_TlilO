@@ -11,7 +11,7 @@ import (
 func main() {
 	payMatrix := mat.NewDense(3, 3, []float64{
 		17,   4,  9,
-		 0,  16,  9,
+		0,  16,  9,
 		12,   2, 19,
 	})
 
@@ -50,4 +50,3 @@ func main() {
 	fmt.Printf("Inaccuracy for a mixed strategy B = %.3f\n", inaccuracyForB.RawMatrix().Data)
 
 }
-
