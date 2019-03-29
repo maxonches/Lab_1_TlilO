@@ -1,72 +1,69 @@
 package analytical
 
-import "fmt"
-
 type KernelStruct struct  {
-	A float64
-	B float64
-	C float64
-	D float64
-	E float64
+	A 	float64
+	B 	float64
+	C 	float64
+	D 	float64
+	E 	float64
 }
 
 type AnalyticalSolveStruct struct {
-	KernelStruct KernelStruct
-	X            float64
-	Y            float64
-	H            float64
+	KernelStruct	KernelStruct
+	X				float64
+	Y				float64
+	H				float64
 }
 
-func Hxy(x, y float64, kernelStruct *KernelStruct) float64 {
-	return kernelStruct.A* x * x + kernelStruct.B* y * y + kernelStruct.C* x * y + kernelStruct.D* x + kernelStruct.E* y
+func Hxy(x, y float64, kernelStruct *KernelStruct) (kernelFunction float64, err error) {
+	kernelFunction = kernelStruct.A * x * x + kernelStruct.B * y * y + kernelStruct.C * x * y + kernelStruct.D * x + kernelStruct.E * y
+
+	return kernelFunction, err
 }
 
-func AnalyticalSolverFunc(kernelStruct KernelStruct) *AnalyticalSolveStruct {
-	analyticalSolve := &AnalyticalSolveStruct{}
+func AnalyticalSolverFunc(kernelStruct KernelStruct) (analyticalSolve *AnalyticalSolveStruct, err error) {
+	analyticalSolve = &AnalyticalSolveStruct{}
 	analyticalSolve.KernelStruct = kernelStruct
 
-	return analyticalSolve
+	return analyticalSolve, err
 }
 
-func Solution(analyticalSolve *AnalyticalSolveStruct) error {
-	err := ConvexConcaveChecking(analyticalSolve)
+func Solution(analyticalSolve *AnalyticalSolveStruct) (err error) {
+	err = ConvexConcaveChecking(analyticalSolve)
 	if err != nil {
 		return err
 	}
-	x, y := SaddlePoint(&analyticalSolve.KernelStruct)
+	x, y, err := SaddlePoint(&analyticalSolve.KernelStruct)
 	if err != nil {
 		return err
 	}
 
 	analyticalSolve.X = x
 	analyticalSolve.Y = y
-	analyticalSolve.H = Hxy(x, y, &analyticalSolve.KernelStruct)
+	analyticalSolve.H, err = Hxy(x, y, &analyticalSolve.KernelStruct)
+	if err != nil {
+		return err
+	}
 
-	return nil
+	return err
 }
 
-func SaddlePoint(kernelStruct *KernelStruct) (float64, float64) {
-	x := (kernelStruct.E*kernelStruct.C -2*kernelStruct.B*kernelStruct.D)/(4*kernelStruct.A*kernelStruct.B -kernelStruct.C*kernelStruct.C)
-	y := -(kernelStruct.C*x+kernelStruct.E)/(2*kernelStruct.B)
+func SaddlePoint(kernelStruct *KernelStruct) (x float64, y float64, err error) {
+	x = (kernelStruct.E*kernelStruct.C -2*kernelStruct.B*kernelStruct.D)/(4*kernelStruct.A*kernelStruct.B -kernelStruct.C*kernelStruct.C)
+	y = -(kernelStruct.C*x+kernelStruct.E)/(2*kernelStruct.B)
 
-	return x, y
+	return x, y, err
 }
 
-
-func ConvexConcaveChecking(kernelStruct *AnalyticalSolveStruct) error {
+func ConvexConcaveChecking(kernelStruct *AnalyticalSolveStruct) (err error) {
 	Hxx := 2 * kernelStruct.KernelStruct.A
 	Hyy := 2 * kernelStruct.KernelStruct.B
 
-	if Hxx < 0 {
+	if Hxx < 0 && Hyy > 0 {
 		return nil
 	} else {
-		fmt.Println("The game is not convex - concave!")
-	}
-	if Hyy > 0 {
-		return nil
-	} else {
-		fmt.Println("The game is not convex - concave!")
+		return err
 	}
 
-	return nil
+	return err
 }
