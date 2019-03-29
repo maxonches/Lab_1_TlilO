@@ -1,20 +1,23 @@
 package main
 
 import (
-	"fmt"
+	"./numerical"
 	"../../labs_TlilO/lab2/analytical"
+	"fmt"
+	"math"
 )
 
 
 func main() {
 	kernelParams := &analytical.KernelStruct {
-		-15,
-		6.667,
-		40,
-		-12,
-		-24,
+		A: -15,
+		B: 6.667,
+		C: 40,
+		D: -12,
+		E: -24,
 	}
 	fmt.Println("АНАЛИТИЧЕСКОЕ РЕШЕНИЕ")
+
 	analyticalSolve, err := analytical.AnalyticalSolverFunc(*kernelParams)
 	if err != nil {
 		fmt.Println("Error of analytical method!", err)
@@ -23,10 +26,16 @@ func main() {
 	if err != nil {
 		fmt.Println("Error of analytical method!", err)
 	}
-	fmt.Printf("Седловая точка x=%.3f, y=%.3f, H(x,y) = %.3f\n", analyticalSolve.X, analyticalSolve.Y, analyticalSolve.H)
+	fmt.Printf("Седловая точка x=%.3f, y=%.3f, H(x,y) = %.3f\n",
+		analyticalSolve.X, analyticalSolve.Y, analyticalSolve.H)
 
 /*=====================================================================================================================================*/
 
 	fmt.Println("ЧИСЛЕННЫЙ МЕТОД")
+
+	numericalSolve := numerical.SolveNumerical(kernelParams, 0.001)
+
+	fmt.Printf("Погрешность численного метода err(H) = |%.4f - %.4f| = %.4f\n",
+		numericalSolve.H, analyticalSolve.H, math.Abs(numericalSolve.H - analyticalSolve.H))
 
 }
