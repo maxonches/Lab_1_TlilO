@@ -1,8 +1,8 @@
 package main
 
 import (
-	"devprojects/labs_TlilO/lab1/analytical"
-	"devprojects/labs_TlilO/lab1/brown-robinson"
+	"../lab1/analytical"
+	"../lab1/brown-robinson"
 	"fmt"
 	"gonum.org/v1/gonum/mat"
 	"math"
