@@ -1,7 +1,6 @@
 package brown_robinson
 
 import (
-	"fmt"
 	"gonum.org/v1/gonum/mat"
 	"sort"
 )
@@ -35,9 +34,9 @@ func (brt *BrownRobinsonTable) Solve(threshold float64, maxSteps int) {
 			break
 		}
 	}
-	for _, step := range brt.steps {
-		fmt.Println(step.String())
-	}
+	//for _, step := range brt.steps {
+	//	fmt.Println(step.String())
+	//}
 }
 
 func (brt *BrownRobinsonTable) getAMixedStrategy() *mat.VecDense {

@@ -48,5 +48,4 @@ func main() {
 	fmt.Printf("B mixed strategy = %.3f\n", strategyB.RawVector().Data)
 	fmt.Printf("Inaccuracy for a mixed strategy A = %.3f\n", inaccuracyForA.RawMatrix().Data)
 	fmt.Printf("Inaccuracy for a mixed strategy B = %.3f\n", inaccuracyForB.RawMatrix().Data)
-
 }

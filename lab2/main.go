@@ -7,7 +7,6 @@ import (
 	"math"
 )
 
-
 func main() {
 	kernelParams := &analytical.KernelStruct {
 		A: -15,
