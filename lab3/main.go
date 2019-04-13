@@ -7,6 +7,10 @@ import (
 	"time"
 )
 
+func GetRandFloat(min, max float64) float64 {
+	return rand.Float64() * (max - min) + min
+}
+
 type Point struct {
 	X 				float64
 	Y 				float64
@@ -16,9 +20,24 @@ type Point struct {
 	AzimuthAngle	float64
 }
 
+func (point *Point) GetDistance(otherPoint *Point) (distance float64) {
+	distance = math.Sqrt(math.Pow(point.X - otherPoint.X,2) + math.Pow(point.Y - otherPoint.Y,2) + math.Pow(point.Z - otherPoint.Z,2))
+
+	return distance
+}
+
 type Sphere struct {
 	Radius	float64
-	Center	Point
+	Center	*Point
+}
+
+func (s *Sphere) GeneratePoint() *Point {
+	z := GetRandFloat(s.Center.Z - s.Radius, s.Center.Z + s.Radius)
+	azimuthAngle := GetRandFloat(0, 2 * math.Pi)
+	zenithAngle := math.Acos(z / s.Radius)
+	point := GetPointFromSpherical(s.Radius, azimuthAngle, zenithAngle)
+
+	return point
 }
 
 type Game struct {
@@ -30,78 +49,42 @@ type Game struct {
 }
 
 func main() {
-	counterWinsA := 0
-	counterWinsB := 0
-	n := 100
-	for i := 1; i <= n; i++ {
-		center := Sphere{}.Center
-		center.X = 0
-		center.Y = 0
-		center.Z = 0
-		result := MakeGame(10, 0.1, Sphere{1, center})
-		if result == 1 {
+	rand.Seed(time.Now().UTC().UnixNano())
+
+	counterWinsA := 0; counterWinsB := 0; gamesNum := 10000; pointsNum := 100; epsilon := 0.2; radius := 1.0
+	center := &Point{X: 0, Y: 0, Z: 0}
+	sphere := &Sphere{radius,center}
+	for i := 1; i <= gamesNum; i++ {
+		result := MakeGame(pointsNum, epsilon, sphere)
+		if result > 0 {
 			counterWinsA++
-		}
-		if result == 2 {
+		} else {
 			counterWinsB++
 		}
 	}
-	fmt.Println("Количество побед игрока А:", counterWinsA, fmt.Sprintf("(%#.2f%%)", (float64(counterWinsA) / float64(n)) * 100))
-	fmt.Println("Количество побед игрока B:", counterWinsB, fmt.Sprintf("(%#.2f%%)", (float64(counterWinsB) / float64(n)) * 100))
-
+	fmt.Println("Количество побед игрока А:", counterWinsA, fmt.Sprintf("(%#.2f%%)", (float64(counterWinsA) / float64(gamesNum)) * 100))
+	fmt.Println("Количество побед игрока B:", counterWinsB, fmt.Sprintf("(%#.2f%%)", (float64(counterWinsB) / float64(gamesNum)) * 100))
 }
 
-func MakeGame(pointsNum int, epsilon float64, sphere Sphere) (result int) {
-	pointBSpherical := sphere.GeneratePoint()
-//	pointB := 1 - rand.Float64() * (sphere.Radius - sphere.Center)
-	pointB := GetPointFromSpherical(pointBSpherical.RadialDistance, pointBSpherical.AzimuthAngle, pointBSpherical.ZenithAngle)
-	for i := 1; i <= pointsNum; i++ {
-		pointASpherical := Point{
-			RadialDistance:sphere.GeneratePoint().RadialDistance,
-			AzimuthAngle:sphere.GeneratePoint().AzimuthAngle,
-			ZenithAngle:sphere.GeneratePoint().ZenithAngle,
-		}
-		pointA := &Point{}
-		pointA = GetPointFromSpherical(pointASpherical.RadialDistance, pointASpherical.AzimuthAngle, pointASpherical.ZenithAngle)
+func MakeGame(pointsNum int, epsilon float64, sphere *Sphere) int {
+	pointB := sphere.GeneratePoint()
+	result := 0
+	for i := 0; i < pointsNum; i++ {
+		pointA := sphere.GeneratePoint()
 		distanceFromBtoA := pointB.GetDistance(pointA)
 		if distanceFromBtoA <= epsilon {
-			result = 1
-			return result // игрок А выиграл
-		}
-		if distanceFromBtoA >= epsilon {
-			result = 2
-			return result // игрок B выиграл
+			result++
 		}
 	}
 
 	return result
 }
 
-func (p *Point) GetDistance(other *Point) (distance float64) {
-	distance = math.Sqrt(math.Pow(p.X - other.X,2) + math.Pow(p.Y - other.Y,2) + math.Pow(p.Z - other.Z,2))
-
-	return distance
-}
-
-func (s *Sphere) GeneratePoint() *Point {
-	point := Point{}
-	rand.Seed(time.Now().UTC().UnixNano())
-	point.Z = rand.Float64() * ((s.Center.X - s.Radius) - (s.Center.X + s.Radius))
-	point.AzimuthAngle = rand.Float64() * (2 * math.Pi - 0)
-	point.RadialDistance = s.Radius
-	point.ZenithAngle = math.Acos(point.Z/s.Radius)
-
-	return &point
-}
-
 func GetPointFromSpherical(RadialDistance float64, AzimuthAngle float64, ZenithAngle float64) *Point {
-	point := Point{}
-	point.RadialDistance = RadialDistance
-	point.AzimuthAngle = AzimuthAngle
-	point.ZenithAngle = ZenithAngle
+	point := &Point{}
 	point.X = RadialDistance * math.Sin(ZenithAngle) * math.Cos(AzimuthAngle)
 	point.Y = RadialDistance * math.Sin(ZenithAngle) * math.Sin(AzimuthAngle)
 	point.Z = RadialDistance * math.Cos(ZenithAngle)
 
-	return &point
+	return point
 }
