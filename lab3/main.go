@@ -51,7 +51,7 @@ type Game struct {
 func main() {
 	rand.Seed(time.Now().UTC().UnixNano())
 
-	counterWinsA := 0; counterWinsB := 0; gamesNum := 10000; pointsNum := 100; epsilon := 0.2; radius := 1.0
+	counterWinsA := 0; counterWinsB := 0; gamesNum := 100000; pointsNum := 50; epsilon := 0.1; radius := 1.0
 	center := &Point{X: 0, Y: 0, Z: 0}
 	sphere := &Sphere{radius,center}
 	for i := 1; i <= gamesNum; i++ {
@@ -65,7 +65,7 @@ func main() {
 	fmt.Println("Параметры игры:")
 	fmt.Println(" Центр сферы:(", center.X, ",", center.Y, ",", center.Z,")\n", "Радиус сферы:", radius, "\n Количество точек:", pointsNum, "\n Максимальное расстояние:", epsilon)
 
-	fmt.Println("\nИгра:\n", "Количество игр:", gamesNum)
+	fmt.Println("\nСтатистика:\n", "Количество игр:", gamesNum)
 	fmt.Println(" Количество побед игрока А:", counterWinsA, fmt.Sprintf("или %#.2f%%", (float64(counterWinsA) / float64(gamesNum)) * 100))
 	fmt.Println(" Количество побед игрока B:", counterWinsB, fmt.Sprintf("или %#.2f%%", (float64(counterWinsB) / float64(gamesNum)) * 100))
 }
