@@ -62,8 +62,12 @@ func main() {
 			counterWinsB++
 		}
 	}
-	fmt.Println("Количество побед игрока А:", counterWinsA, fmt.Sprintf("(%#.2f%%)", (float64(counterWinsA) / float64(gamesNum)) * 100))
-	fmt.Println("Количество побед игрока B:", counterWinsB, fmt.Sprintf("(%#.2f%%)", (float64(counterWinsB) / float64(gamesNum)) * 100))
+	fmt.Println("Параметры игры:")
+	fmt.Println(" Центр сферы:(", center.X, ",", center.Y, ",", center.Z,")\n", "Радиус сферы:", radius, "\n Количество точек:", pointsNum)
+
+	fmt.Println("\nИгра:\n", "Количество игр:", gamesNum)
+	fmt.Println(" Количество побед игрока А:", counterWinsA, fmt.Sprintf("или %#.2f%%", (float64(counterWinsA) / float64(gamesNum)) * 100))
+	fmt.Println(" Количество побед игрока B:", counterWinsB, fmt.Sprintf("или %#.2f%%", (float64(counterWinsB) / float64(gamesNum)) * 100))
 }
 
 func MakeGame(pointsNum int, epsilon float64, sphere *Sphere) int {
