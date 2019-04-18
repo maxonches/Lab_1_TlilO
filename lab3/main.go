@@ -63,7 +63,7 @@ func main() {
 		}
 	}
 	fmt.Println("Параметры игры:")
-	fmt.Println(" Центр сферы:(", center.X, ",", center.Y, ",", center.Z,")\n", "Радиус сферы:", radius, "\n Количество точек:", pointsNum)
+	fmt.Println(" Центр сферы:(", center.X, ",", center.Y, ",", center.Z,")\n", "Радиус сферы:", radius, "\n Количество точек:", pointsNum, "\n Максимальное расстояние:", epsilon)
 
 	fmt.Println("\nИгра:\n", "Количество игр:", gamesNum)
 	fmt.Println(" Количество побед игрока А:", counterWinsA, fmt.Sprintf("или %#.2f%%", (float64(counterWinsA) / float64(gamesNum)) * 100))
