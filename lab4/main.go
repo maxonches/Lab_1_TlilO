@@ -101,7 +101,7 @@ func SearchAllOptimalSituations(inputMatrix [][][]float64) {
 		for j := 0; j < len(inputMatrix[0]); j++ {
 			isNashEfficient := CheckEquilibriumByNash(inputMatrix, i, j)
 			isParetoOptimal := СheckParetoOptimality(inputMatrix, i, j)
-			result := fmt.Sprintf("%v%v%v%v%v", "(", inputMatrix[i][j][0], ";", inputMatrix[i][j][1], ")")
+			result := fmt.Sprintf("(%v\t%v%v%v\t%v)","", inputMatrix[i][j][0], ";", inputMatrix[i][j][1], "")
 			if isNashEfficient && isParetoOptimal {
 				result = fmt.Sprintf("%v%v%v", COLOR_GREEN, result, SET)
 			}
