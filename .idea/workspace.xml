@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b824833-1738-416f-9ecd-a81a73ac6476" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lab4/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab4/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab5/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab5/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/main.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,30 +92,52 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-1323074507">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="gitignore" value="1" />
+          <entry key="go" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Go" value="2" />
+          <entry key="PLAIN_TEXT" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="go" value="11" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Go" value="11" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lab4/main.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="158" column="52" selection-start-line="158" selection-start-column="52" selection-end-line="158" selection-end-column="52" />
-              <folding>
-                <element signature="e#14#65#0" expanded="true" />
-                <element signature="e#347#407#0" />
-                <element signature="e#447#509#0" />
-                <element signature="e#551#611#0" />
-                <element signature="e#656#724#0" />
-                <element signature="n#!!block;n#NewLR9Main#0" />
-                <element signature="n#!!block;n#solveAnalitycally#0" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/lab5/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lab4/.gitignore">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/lab5/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -141,8 +165,9 @@
         <option value="$PROJECT_DIR$/lab1/brown-robinson/brown-robinson-table.go" />
         <option value="$PROJECT_DIR$/lab2/numerical/numerical-method.go" />
         <option value="$PROJECT_DIR$/lab2/main.go" />
-        <option value="$PROJECT_DIR$/lab3/main.go" />
         <option value="$PROJECT_DIR$/lab4/main.go" />
+        <option value="$PROJECT_DIR$/lab3/main.go" />
+        <option value="$PROJECT_DIR$/lab5/main.go" />
       </list>
     </option>
   </component>
@@ -174,12 +199,7 @@
             <path>
               <item name="labs_TlilO" type="b2602c69:ProjectViewProjectNode" />
               <item name="labs_TlilO" type="462c0819:PsiDirectoryNode" />
-              <item name="lab3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="labs_TlilO" type="b2602c69:ProjectViewProjectNode" />
-              <item name="labs_TlilO" type="462c0819:PsiDirectoryNode" />
-              <item name="lab4" type="462c0819:PsiDirectoryNode" />
+              <item name="lab5" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="labs_TlilO" type="b2602c69:ProjectViewProjectNode" />
@@ -201,17 +221,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\MD\go\src\github.com\elliotchance\c2go" />
-      <recent name="C:\Users\MD\go\src\devprojects\labs_TlilO\lab4" />
-      <recent name="C:\Users\MD\go\src\devprojects\labs_TlilO\lab3" />
-      <recent name="C:\Users\MD\go\src\devprojects\labs_TlilO\lab2" />
-      <recent name="C:\Users\MD\go\src\devprojects\labs_TlilO\lab2\numerical" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\MD\go\src\devprojects\labs_TlilO\lab1" />
       <recent name="C:\Users\MD\go\src\devprojects\Lab_1_TlilO\brown-robinson" />
       <recent name="C:\Users\MD\go\src\devprojects\Lab_1_TlilO\analytical" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Максим\go\src\awesomeProject3\labs_TlilO\lab5" />
+      <recent name="C:\Users\MD\go\src\github.com\elliotchance\c2go" />
+      <recent name="C:\Users\MD\go\src\devprojects\labs_TlilO\lab4" />
+      <recent name="C:\Users\MD\go\src\devprojects\labs_TlilO\lab3" />
+      <recent name="C:\Users\MD\go\src\devprojects\labs_TlilO\lab2" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -226,7 +246,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go">
+  <component name="RunManager" selected="Go Build.go build main.go (4)">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="labs_TlilO" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -302,8 +322,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Build.go build main.go (4)" />
+        <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Build.go build main.go (3)" />
         <item itemvalue="Go Build.lab1" />
         <item itemvalue="Go Build.go build main.go (2)" />
@@ -311,15 +331,15 @@
     </recent_temporary>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13615733" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1391258" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2442623" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35595107" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.55409837" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -354,20 +374,8 @@
     <entry file="file://$PROJECT_DIR$/lab2/game-theory-labs/lab6/brown-robinson/brown-robinson-solver.go" />
     <entry file="file://$PROJECT_DIR$/lab2/game-theory-labs/lab7/solver/numerical-solver.go" />
     <entry file="file://$USER_HOME$/Downloads/Lab_1_TlilO/main.go" />
-    <entry file="file://$PROJECT_DIR$/../../lab1/brown-robinson/brown-robinson-table.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lab1/brown-robinson/brown-robinson-solver.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lab1/brown-robinson/brown-robinson-table.go" />
+    <entry file="file://$PROJECT_DIR$/../../lab1/brown-robinson/brown-robinson-solver.go" />
     <entry file="file://$PROJECT_DIR$/lab2/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -423,16 +431,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab4/LR9Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../github.com/elliotchance/c2go/lab4.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/lab4/LR9Main.java" />
+    <entry file="file://$PROJECT_DIR$/../../github.com/elliotchance/c2go/lab4.cpp" />
     <entry file="file://C:/Go/src/builtin/builtin.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -468,13 +468,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab3/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lab1/analytical/analytical-solver.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -484,22 +477,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lab4/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="158" column="52" selection-start-line="158" selection-start-column="52" selection-end-line="158" selection-end-column="52" />
-          <folding>
-            <element signature="e#14#65#0" expanded="true" />
-            <element signature="e#347#407#0" />
-            <element signature="e#447#509#0" />
-            <element signature="e#551#611#0" />
-            <element signature="e#656#724#0" />
-            <element signature="n#!!block;n#NewLR9Main#0" />
-            <element signature="n#!!block;n#solveAnalitycally#0" />
-          </folding>
+        <state relative-caret-position="2601">
+          <caret line="158" selection-start-line="158" selection-end-line="158" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab3/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lab4/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab5/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab5/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

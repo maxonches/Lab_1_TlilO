@@ -51,7 +51,7 @@ type Game struct {
 func main() {
 	rand.Seed(time.Now().UTC().UnixNano())
 
-	counterWinsA := 0; counterWinsB := 0; gamesNum := 100000; pointsNum := 1; epsilon := 1.4; radius := 1.0
+	counterWinsA := 0; counterWinsB := 0; gamesNum := 100000; pointsNum := 10; epsilon := 0.1; radius := 1.0
 	center := &Point{X: 0, Y: 0, Z: 0}
 	sphere := &Sphere{radius,center}
 	for i := 1; i <= gamesNum; i++ {
