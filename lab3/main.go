@@ -12,12 +12,13 @@ func GetRandFloat(min, max float64) float64 {
 }
 
 type Point struct {
-	X 				float64
-	Y 				float64
-	Z 				float64
-	RadialDistance	float64
-	ZenithAngle		float64
-	AzimuthAngle	float64
+	X float64
+	Y float64
+	Z float64
+	RadialDistance float64
+	ZenithAngle float64
+	AzimuthAngle float64
+	PointsA []Point
 }
 
 func (point *Point) GetDistance(otherPoint *Point) (distance float64) {
@@ -27,8 +28,8 @@ func (point *Point) GetDistance(otherPoint *Point) (distance float64) {
 }
 
 type Sphere struct {
-	Radius	float64
-	Center	*Point
+	Radius float64
+	Center *Point
 }
 
 func (s *Sphere) GeneratePoint() *Point {
@@ -41,47 +42,64 @@ func (s *Sphere) GeneratePoint() *Point {
 }
 
 type Game struct {
-	Apoints		[]Point
-	Bpoints		  Point
-	PointsNum	  int
-	Epsilon		  float64
-	Sphere        Sphere
+	Apoints []Point
+	Bpoints Point
+	PointsNum int
+	Epsilon float64
+	Sphere Sphere
 }
 
 func main() {
 	rand.Seed(time.Now().UTC().UnixNano())
 
-	counterWinsA := 0; counterWinsB := 0; gamesNum := 100000; pointsNum := 1; epsilon := 1.4; radius := 1.0
+	pointsNumA := 3; counterWinsA := 0; counterWinsB := 0; gamesNum := 1000; epsilon := 0.4; radius := 1.0
 	center := &Point{X: 0, Y: 0, Z: 0}
 	sphere := &Sphere{radius,center}
-	for i := 1; i <= gamesNum; i++ {
-		result := MakeGame(pointsNum, epsilon, sphere)
-		if result > 0 {
-			counterWinsA++
-		} else {
-			counterWinsB++
+	var gameCostBetter float64
+	for i := 0; i < gamesNum; i++ {
+		counterWinsA, counterWinsB = GameCost(pointsNumA, gamesNum, epsilon, sphere)
+		gameCostA := float64(counterWinsA)/float64(gamesNum)
+		if gameCostA > gameCostBetter {
+			gameCostBetter = gameCostA
 		}
 	}
-	fmt.Println("Параметры игры:")
-	fmt.Println(" Центр сферы:(", center.X, ",", center.Y, ",", center.Z,")\n", "Радиус сферы:", radius, "\n Количество точек:", pointsNum, "\n Максимальное расстояние:", epsilon)
+	gameCostAnalytical := (float64(pointsNumA) / 2.0)*(1.0 - math.Sqrt(1.0 - (math.Pow((epsilon / radius), 2))))
+
+	fmt.Println(" Параметры игры:")
+	fmt.Println(" Центр сферы:(", center.X, ",", center.Y, ",", center.Z,")\n", "Радиус сферы:", radius, "\n Количество точек:", pointsNumA, "\n Максимальное расстояние:", epsilon)
 
 	fmt.Println("\nСтатистика:\n", "Количество игр:", gamesNum)
 	fmt.Println(" Количество побед игрока А:", counterWinsA, fmt.Sprintf("или %#.2f%%", (float64(counterWinsA) / float64(gamesNum)) * 100))
 	fmt.Println(" Количество побед игрока B:", counterWinsB, fmt.Sprintf("или %#.2f%%", (float64(counterWinsB) / float64(gamesNum)) * 100))
+	fmt.Println(" Цена игры (аналитически): ", fmt.Sprintf("%.4f", gameCostAnalytical))
+	fmt.Println(" Цена игры (численно): ", fmt.Sprintf("%.4f", gameCostBetter))
+	fmt.Println(" Погрешность: ", fmt.Sprintf("%.4f", gameCostAnalytical - gameCostBetter))
 }
 
-func MakeGame(pointsNum int, epsilon float64, sphere *Sphere) int {
-	pointB := sphere.GeneratePoint()
-	result := 0
-	for i := 0; i < pointsNum; i++ {
+func GameCost(pointsNumA int, gamesNum int, epsilon float64, sphere *Sphere) (int, int) {
+	pointsA := []*Point{}
+	winsA := 0; winsB := 0
+
+	for i := 0; i < pointsNumA; i++ {
 		pointA := sphere.GeneratePoint()
-		distanceFromBtoA := pointB.GetDistance(pointA)
-		if distanceFromBtoA <= epsilon {
-			result++
+		pointsA = append(pointsA, pointA)
+	}
+
+	for j := 0; j < gamesNum; j++ {
+		pointB := sphere.GeneratePoint()
+		for m := 0; m < pointsNumA; m++ {
+			distanceBetweenPoints := pointB.GetDistance(pointsA[m])
+			if distanceBetweenPoints <= epsilon {
+				winsA++
+				break
+			} else {
+				winsB++
+				break
+			}
 		}
 	}
 
-	return result
+	return winsA, winsB
 }
 
 func GetPointFromSpherical(RadialDistance float64, AzimuthAngle float64, ZenithAngle float64) *Point {
