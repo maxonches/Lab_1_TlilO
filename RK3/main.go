@@ -87,6 +87,8 @@ func main() {
 
 	vectSheply := VectorSheply(charFunc)
 	fmt.Printf("Vector Sheply = %.2f\n", vectSheply)
+	IsGroupRationalization(charFunc, vectSheply)
+	IndividualRationalization(charFunc, vectSheply)
 }
 
 func VectorSheply(charFunc map[string]int) (vectorSheply []float64) {
@@ -110,7 +112,6 @@ func VectorSheply(charFunc map[string]int) (vectorSheply []float64) {
 
 	return vectorSheply
 }
-
 
 func Union(set1, set2 *hashset.Set) *hashset.Set {
 	var union *hashset.Set
@@ -166,6 +167,41 @@ func StringToSet(str string) *hashset.Set {
 	_ = set.FromJSON([]byte(str))
 
 	return set
+}
+
+func IsGroupRationalization(charFunc map[string]int, vectorSheply []float64) {
+	totalCoalitionStr := SetToString(hashset.New(1,2,3,4))
+	totalCoalitionVal := charFunc[totalCoalitionStr]
+	sumOfComponents := 0.0
+	for i := 0; i < len(vectorSheply); i++ {
+		sumOfComponents += vectorSheply[i]
+	}
+	fmt.Printf("The sum of the components of the Shaply's vector = %.2f, Value of the coalition = %d\n", sumOfComponents, totalCoalitionVal)
+	if int(sumOfComponents) == totalCoalitionVal {
+		fmt.Println("Group rationalization condition satisfied")
+	} else {
+		fmt.Println("Group rationalization condition is not satisfied")
+	}
+}
+
+func IndividualRationalization(charFunc map[string]int, vectorSheply []float64) {
+	unSatisfiedAmount := 0
+	for i := 1; i <= len(vectorSheply); i++ {
+		setIStr := SetToString(hashset.New(i))
+		iVal := charFunc[setIStr]
+		if int(vectorSheply[i-1]) < iVal {
+			fmt.Printf(
+				"\nCondition for player %d is not satisfied: Component of Sheply's vector  < V({%d}) (%.3f < %d)\n",
+				i, i, vectorSheply[i], iVal,
+			)
+			unSatisfiedAmount++
+		} else {
+			fmt.Printf("\nX%d(V)=%.3f >= V({%d}) = %d\n", i, vectorSheply[i-1], i, iVal)
+		}
+	}
+	if unSatisfiedAmount == 0 {
+		fmt.Println("\nIndividual rationalization condition satisfied")
+	}
 }
 
 type ByLenAndValues []string
