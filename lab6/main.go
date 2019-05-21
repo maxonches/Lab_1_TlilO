@@ -1,7 +1,7 @@
 package main
 
 import (
-	"devprojects/labs_TlilO/lab7/service"
+	"devprojects/labs_TlilO/lab6/service"
 	"fmt"
 	"math/rand"
 )

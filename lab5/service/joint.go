@@ -51,9 +51,13 @@ func NewJoint(player int, parent *Joint) *Joint {
 
 func (joint *Joint) String() string {
 	var bb bytes.Buffer
-	bb.WriteString(fmt.Sprintf("index = %d, player = %d", joint.Index, joint.Player))
-	if len(joint.Wins) > 0 {
-		bb.WriteString(fmt.Sprintf(", %v", joint.Wins))
+	if joint.Player != 0 {
+		bb.WriteString(fmt.Sprintf("index = %d, player = %d ", joint.Index, joint.Player))
+	} else {
+		bb.WriteString(fmt.Sprintf("index = %d ", joint.Index))
+	}
+	for _, win := range joint.Wins {
+		bb.WriteString(fmt.Sprintf("%v ", win))
 	}
 
 	return bb.String()
@@ -84,10 +88,8 @@ func (joint *Joint) WinContain(win []int) bool {
 
 func NewTree() *TreeRandomGame {
 	colors := []ColorFunc{
-		color.New(color.FgYellow).SprintFunc(),
-		color.New(color.FgGreen).SprintFunc(),
-		color.New(color.FgBlue).SprintFunc(),
-		color.New(color.FgCyan).SprintFunc(),
+		color.New(color.BgGreen).SprintFunc(),
+		color.New(color.FgRed).SprintFunc(),
 	}
 	tree := &TreeRandomGame{
 		Deep:        7,

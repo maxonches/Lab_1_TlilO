@@ -1,0 +1,127 @@
+index = 0, player = 1 
+├── index = 1, player = 2 
+│   ├── index = 3, player = 3 
+│   │   ├── index = 7, player = 1 
+│   │   │   ├── index = 15, player = 2 
+│   │   │   │   ├── index = 31, player = 3 
+│   │   │   │   │   ├── index = 63 [5 0 5] 
+│   │   │   │   │   └── index = 64 [2 7 9] 
+│   │   │   │   └── index = 32, player = 3 
+│   │   │   │       ├── index = 65 [7 9 2] 
+│   │   │   │       └── index = 66 [1 1 10] 
+│   │   │   └── index = 16, player = 2 
+│   │   │       ├── index = 33, player = 3 
+│   │   │       │   ├── index = 67 [13 3 6] 
+│   │   │       │   └── index = 68 [10 11 14] 
+│   │   │       └── index = 34, player = 3 
+│   │   │           ├── index = 69 [5 3 0] 
+│   │   │           └── index = 70 [9 7 0] 
+│   │   └── index = 8, player = 1 
+│   │       ├── index = 17, player = 2 
+│   │       │   ├── index = 35, player = 3 
+│   │       │   │   ├── index = 71 [7 6 3] 
+│   │       │   │   └── index = 72 [15 9 2] 
+│   │       │   └── index = 36, player = 3 
+│   │       │       ├── index = 73 [11 4 10] 
+│   │       │       └── index = 74 [12 10 1] 
+│   │       └── index = 18, player = 2 
+│   │           ├── index = 37, player = 3 
+│   │           │   ├── index = 75 [12 6 0] 
+│   │           │   └── index = 76 [3 4 0] 
+│   │           └── index = 38, player = 3 
+│   │               ├── index = 77 [0 0 15] 
+│   │               └── index = 78 [7 9 8] 
+│   └── index = 4, player = 3 
+│       ├── index = 9, player = 1 
+│       │   ├── index = 19, player = 2 
+│       │   │   ├── index = 39, player = 3 
+│       │   │   │   ├── index = 79 [14 8 5] 
+│       │   │   │   └── index = 80 [10 7 4] 
+│       │   │   └── index = 40, player = 3 
+│       │   │       ├── index = 81 [9 0 6] 
+│       │   │       └── index = 82 [3 9 11] 
+│       │   └── index = 20, player = 2 
+│       │       ├── index = 41, player = 3 
+│       │       │   ├── index = 83 [0 3 6] 
+│       │       │   └── index = 84 [15 6 13] 
+│       │       └── index = 42, player = 3 
+│       │           ├── index = 85 [7 13 1] 
+│       │           └── index = 86 [12 11 9] 
+│       └── index = 10, player = 1 
+│           ├── index = 21, player = 2 
+│           │   ├── index = 43, player = 3 
+│           │   │   ├── index = 87 [14 2 10] 
+│           │   │   └── index = 88 [1 5 4] 
+│           │   └── index = 44, player = 3 
+│           │       ├── index = 89 [7 10 0] 
+│           │       └── index = 90 [9 1 1] 
+│           └── index = 22, player = 2 
+│               ├── index = 45, player = 3 
+│               │   ├── index = 91 [6 4 11] 
+│               │   └── index = 92 [7 14 5] 
+│               └── index = 46, player = 3 
+│                   ├── index = 93 [0 8 4] 
+│                   └── index = 94 [1 12 4] 
+└── index = 2, player = 2 
+    ├── index = 5, player = 3 
+    │   ├── index = 11, player = 1 
+    │   │   ├── index = 23, player = 2 
+    │   │   │   ├── index = 47, player = 3 
+    │   │   │   │   ├── index = 95 [0 0 7] 
+    │   │   │   │   └── index = 96 [15 5 15] 
+    │   │   │   └── index = 48, player = 3 
+    │   │   │       ├── index = 97 [11 8 12] 
+    │   │   │       └── index = 98 [2 12 5] 
+    │   │   └── index = 24, player = 2 
+    │   │       ├── index = 49, player = 3 
+    │   │       │   ├── index = 99 [10 0 8] 
+    │   │       │   └── index = 100 [3 1 0] 
+    │   │       └── index = 50, player = 3 
+    │   │           ├── index = 101 [7 11 7] 
+    │   │           └── index = 102 [14 3 10] 
+    │   └── index = 12, player = 1 
+    │       ├── index = 25, player = 2 
+    │       │   ├── index = 51, player = 3 
+    │       │   │   ├── index = 103 [2 10 3] 
+    │       │   │   └── index = 104 [7 15 6] 
+    │       │   └── index = 52, player = 3 
+    │       │       ├── index = 105 [7 3 6] 
+    │       │       └── index = 106 [10 15 11] 
+    │       └── index = 26, player = 2 
+    │           ├── index = 53, player = 3 
+    │           │   ├── index = 107 [5 3 15] 
+    │           │   └── index = 108 [1 10 11] 
+    │           └── index = 54, player = 3 
+    │               ├── index = 109 [5 8 6] 
+    │               └── index = 110 [11 6 2] 
+    └── index = 6, player = 3 
+        ├── index = 13, player = 1 
+        │   ├── index = 27, player = 2 
+        │   │   ├── index = 55, player = 3 
+        │   │   │   ├── index = 111 [12 3 6] 
+        │   │   │   └── index = 112 [11 0 0] 
+        │   │   └── index = 56, player = 3 
+        │   │       ├── index = 113 [7 1 10] 
+        │   │       └── index = 114 [9 2 8] 
+        │   └── index = 28, player = 2 
+        │       ├── index = 57, player = 3 
+        │       │   ├── index = 115 [7 9 3] 
+        │       │   └── index = 116 [14 1 15] 
+        │       └── index = 58, player = 3 
+        │           ├── index = 117 [14 8 9] 
+        │           └── index = 118 [2 6 4] 
+        └── index = 14, player = 1 
+            ├── index = 29, player = 2 
+            │   ├── index = 59, player = 3 
+            │   │   ├── index = 119 [14 8 12] 
+            │   │   └── index = 120 [7 1 0] 
+            │   └── index = 60, player = 3 
+            │       ├── index = 121 [4 6 3] 
+            │       └── index = 122 [4 4 1] 
+            └── index = 30, player = 2 
+                ├── index = 61, player = 3 
+                │   ├── index = 123 [15 1 2] 
+                │   └── index = 124 [14 13 14] 
+                └── index = 62, player = 3 
+                    ├── index = 125 [4 15 3] 
+                    └── index = 126 [1 11 1] 

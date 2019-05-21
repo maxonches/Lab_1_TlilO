@@ -12,7 +12,7 @@ func main() {
 
 	t := service.NewTree()
 	fmt.Printf("Random position game (%d):\n Located in file 'RandomPosGame.txt'\n", t.Deep)
-	//fmt.Println(service.PrintTree(t))
+	fmt.Println(service.PrintTree(t))
 	f0, err := os.Create("RandomPosGame.txt")
 	if err != nil {
 		fmt.Println(err)
@@ -28,7 +28,7 @@ func main() {
 	fmt.Println("Solution by method of inverse induction:\n Located in file 'InverseInduction.txt'")
 	ris := service.NewSolver(t)
 	service.Solve(ris)
-	//fmt.Println(service.PrintTree(t))
+	fmt.Println(service.PrintTree(t))
 	f1, err := os.Create("InverseInduction.txt")
 	if err != nil {
 		fmt.Println(err)
