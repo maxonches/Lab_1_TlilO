@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b824833-1738-416f-9ecd-a81a73ac6476" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab5/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/lab5/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab5/service/joint.go" beforeDir="false" afterPath="$PROJECT_DIR$/lab5/service/joint.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab6/service/functions.go" beforeDir="false" afterPath="$PROJECT_DIR$/lab6/service/functions.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +67,7 @@
         <counts>
           <entry key="cpp" value="1" />
           <entry key="gitignore" value="11" />
-          <entry key="go" value="103" />
+          <entry key="go" value="104" />
           <entry key="java" value="1" />
           <entry key="txt" value="2" />
           <entry key="yaml" value="5" />
@@ -78,7 +76,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="C++" value="1" />
-          <entry key="Go" value="103" />
+          <entry key="Go" value="104" />
           <entry key="PLAIN_TEXT" value="14" />
           <entry key="YAML" value="5" />
         </counts>
@@ -86,13 +84,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="9" />
-          <entry key="go" value="10351" />
+          <entry key="go" value="10357" />
           <entry key="yaml" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Go" value="10351" />
+          <entry key="Go" value="10357" />
           <entry key="PLAIN_TEXT" value="9" />
           <entry key="YAML" value="19" />
         </counts>
@@ -120,7 +118,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lab7/.gitignore">
+        <entry file="file://$PROJECT_DIR$/lab6/.gitignore">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -133,7 +131,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lab5/service/joint.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -145,29 +143,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RandomPosGame.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="126" column="45" selection-start-line="126" selection-start-column="45" selection-end-line="126" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/InverseInduction.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lab7/main.go">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lab6/main.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lab6/service/functions.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -231,6 +220,7 @@
         <option value="$PROJECT_DIR$/RandomPosGame.txt" />
         <option value="$PROJECT_DIR$/lab5/main.go" />
         <option value="$PROJECT_DIR$/lab5/service/joint.go" />
+        <option value="$PROJECT_DIR$/lab6/service/functions.go" />
       </list>
     </option>
   </component>
@@ -263,18 +253,7 @@
             <path>
               <item name="labs_TlilO" type="b2602c69:ProjectViewProjectNode" />
               <item name="labs_TlilO" type="462c0819:PsiDirectoryNode" />
-              <item name="lab5" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="labs_TlilO" type="b2602c69:ProjectViewProjectNode" />
-              <item name="labs_TlilO" type="462c0819:PsiDirectoryNode" />
-              <item name="lab5" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="labs_TlilO" type="b2602c69:ProjectViewProjectNode" />
-              <item name="labs_TlilO" type="462c0819:PsiDirectoryNode" />
-              <item name="lab7" type="462c0819:PsiDirectoryNode" />
+              <item name="lab6" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="labs_TlilO" type="b2602c69:ProjectViewProjectNode" />
@@ -409,12 +388,12 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15658094" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15658094" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4295082" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.6873977" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.452459" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -649,25 +628,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab7/service/functions.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="41" column="6" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab7/.gitignore">
+    <entry file="file://$PROJECT_DIR$/lab6/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/lab5/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab7/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RandomPosGame.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -707,6 +672,20 @@
           <folding>
             <element signature="e#17#114#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab6/service/functions.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab6/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
         </state>
       </provider>
     </entry>

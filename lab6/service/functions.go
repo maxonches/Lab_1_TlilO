@@ -41,10 +41,10 @@ func (g *Game) MakeGame() {
 	Xt, t := g.multByAUntilAccuracyReached(g.VectorX)
 	//AInf := computeAInf(g.MatrixA, t)
 	fmt.Println("Initial agent opinions:")
-	PrintMatrix(g.VectorX.T(), "VectorX(0)")
+	PrintMatrix(g.VectorX.T(), "Vx(0)")
 	fmt.Printf("Iterations: %d\n", t)
 	fmt.Println("Resulting agent opinion without influence:")
-	PrintMatrix(Xt.T(), "VectorX(t->inf)")
+	PrintMatrix(Xt.T(), "Vx(t->inf)")
 	//PrintMatrix(g.MatrixA, "A")
 	//PrintMatrix(AInf, "AInf")
 
@@ -88,11 +88,11 @@ func (g *Game) MakeGameInfluence() {
 	fmt.Printf("Formed initial opinion of the first player: %.0f\n", uInflValue)
 	fmt.Printf("Formed initial opinion of the second player: %.0f\n", vInflValue)
 	fmt.Printf("Initial opinions with regard to the formed:\n")
-	PrintMatrix(xInfl.T(), "VectorX(0)")
+	PrintMatrix(xInfl.T(), "Vx(0)")
 	Xt, t := g.multByAUntilAccuracyReached(xInfl)
 	fmt.Printf("Iterations: %d\n", t)
 	fmt.Println("Resulting opinion:")
-	PrintMatrix(Xt.T(), "VectorX(t->inf)")
+	PrintMatrix(Xt.T(), "Vx(t->inf)")
 }
 
 func computeAInf(A *mat.Dense, itersNum int) (*mat.Dense) {
